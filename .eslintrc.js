@@ -1,4 +1,3 @@
-// 代码语法校验
 module.exports = {
   root: true,
   env: {
@@ -16,7 +15,7 @@ module.exports = {
     'prettier',
   ],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 12,
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
     ecmaFeatures: {
@@ -38,6 +37,8 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-var': 'error',
+    // 不强制属性名称的驼峰样式 always（默认值）
+    properties: 'never',
     'prettier/prettier': 'error',
     // 禁止出现console
     'no-console': 'warn',
@@ -137,7 +138,6 @@ module.exports = {
     'switch-colon-spacing': 'warn',
     // 强制箭头函数的箭头前后使用一致的空格
     'arrow-spacing': 'warn',
-    'no-var': 'warn',
     'prefer-const': 'warn',
     'prefer-rest-params': 'warn',
     'no-useless-escape': 'warn',
