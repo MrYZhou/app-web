@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
+// import { useSystemStore } from '@/store/system'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -8,9 +9,14 @@ const routes: RouteRecordRaw[] = [
   },
 ]
 
+// const dynamic: RouteRecordRaw[] = []
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes: routes,
+})
+router.beforeEach((to) => {
+  // const systemStore = useSystemStore()
+  // const dynamic: RouteRecordRaw[] = systemStore.getDynamicRoute()
 })
 
 export default router
