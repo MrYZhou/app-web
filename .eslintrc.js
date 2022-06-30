@@ -37,11 +37,9 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-var': 'error',
-    // 不强制属性名称的驼峰样式 always（默认值）
-    properties: 'never',
     'prettier/prettier': 'error',
-    // 禁止出现console
-    'no-console': 'warn',
+    // 禁止出现console off , warn
+    'no-console': 'off',
     // 禁用debugger
     'no-debugger': 'warn',
     // 禁止出现重复的 case 标签
